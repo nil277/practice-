@@ -1,0 +1,7 @@
+<p>array-component works!</p>
+<div *ngFor= "let obj of list; let i=index">
+    <h1>{{obj.name}}</h1>
+    <!-- <button [routerLink]="['/moviebutton', i,obj.moviename]" routerLinkActive="router-link-active">More</button> -->
+    <button [routerLink]="['/moviebutton', i,obj.name]" [queryParams]="{page:1 ,orderBy:'asc'}" routerLinkActive="router-link-active">More</button>
+    <button (click) = "onSubmit()">Submit</button>
+</div>
